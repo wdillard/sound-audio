@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import NavMenu from './components/NavMenu';
+import Container from 'react-bootsrtap/Container';
+import MainPage from './components/MainPage';
+import AboutChris from './components/AboutChris';
+import AboutSoundGarden from './components/AboutSoundGarden';
+import AboutAudioSlave from './components/AboutAudioSlave';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function SAApp() {
+    return (
+        <BrowserRouter>
+            <NavMenu />
+            <Container>
+                <Route path="/" exact component={MainPage} />
+                <Route path="/aboutChris" component={AboutChris} />
+                <Route path="/aboutSoundGarden" component={AboutSoundGarden} />
+                <Route path="/aboutAudioSlave" component={AboutAudioSlave} />
+            </Container>
+        </BrowserRouter>
+    );
 }
 
-export default App;
+export default SAApp;
