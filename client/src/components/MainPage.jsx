@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import SearchForm from './SearchForm';
 import SongBox from './SongBox';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
 
 const MainPage = () => {
   const [search, setSearch] = useState(['chocise']);
   const [apiData, setApiData] = useState([]);
 
-  const handleSubmit = (event) => {
+  const handleChange = (event) => {
     setSearch(event.target.value);
   };
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await axios.get(
+      const response = await axios.get(
         `https://www.songsterr.com/a/ra/songs/byartists.json?artists=audioslave,%20soundgarden,%22Chris%20Cornell%22`
       );
 
@@ -31,19 +31,21 @@ const MainPage = () => {
     return (
         <>
             <div className="search">
-                <SearchForm serch={search} handleSubmitProp={handleSubmit} />
+                <SearchForm serch={search} onChange={handleChange} />
             </div>
             <Row>
                 {filteredSongs && filteredSongs.map((song) => {
                     console.log(song);
                     return (
-                    <SongBox
+                      <div>
+                        <SongBox
                         key={song.id}
                         id={song.id}
                         title={song.title}
                         artist={song.artist.name}
-                    />
-                    );
+                        />
+                      </div>
+                    )
                 })}
             </Row>
         </>
