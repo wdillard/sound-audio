@@ -9,7 +9,7 @@ import AboutAudioSlave from './components/AboutAudioSlave';
 
 import './SoundAudio.css';
 
-function SAApp() {
+function SoundAudio() {
     return (
         <BrowserRouter>
             <NavMenu />
@@ -23,4 +23,4 @@ function SAApp() {
     );
 }
 
-export default SAApp;
+export default SoundAudio;

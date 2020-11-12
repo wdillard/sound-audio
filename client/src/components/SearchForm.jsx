@@ -3,7 +3,7 @@
 
  const SearchForm = (handleSubmitProp) => {
     return (
-        <Form onChange={handleSubmitProp}>
+        <Form onSubmit={handleSubmitProp}>
             <Form.Row>
                 <Form.Control
                     id='searchbar'

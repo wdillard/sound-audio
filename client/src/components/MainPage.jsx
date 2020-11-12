@@ -6,12 +6,11 @@ import SongBox from './SongBox';
 import Row from 'react-bootstrap/Row';
 
 const MainPage = () => {
-  const [search, setSearch] = useState([]);
-  const [apiData, setApiData] = useState({});
+  const [search, setSearch] = useState(['chocise']);
+  const [apiData, setApiData] = useState([]);
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setSearch(event.target.elements.searchbar.value);
+    setSearch(event.target.value);
   };
 
   useEffect(() => {
@@ -23,16 +22,19 @@ const MainPage = () => {
       setApiData(response.data);
     };
     fetchData();
-  }, [search]);
+  }, []);
+
+  const filteredSongs = apiData.filter((song) => 
+    song.title.toLowerCase().includes(search)
+  );
 
     return (
         <>
-            <div>
-                <SearchForm handleSubmitProp={handleSubmit} />
+            <div className="search">
+                <SearchForm serch={search} handleSubmitProp={handleSubmit} />
             </div>
             <Row>
-                {apiData.songs &&
-                apiData.songs.map((song) => {
+                {filteredSongs && filteredSongs.map((song) => {
                     console.log(song);
                     return (
                     <SongBox

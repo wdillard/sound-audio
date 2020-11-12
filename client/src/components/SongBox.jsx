@@ -6,8 +6,8 @@ import '../SoundAudio';
 
 const SongBox = (props) => {
     return (
-        <Card className='Box'>
-            <Card.Img src='#' alt="cover" />
+        <Card className='Box' style={{ width: '18rem' }}>
+            <Card.Img src='https://exclaim.ca/images/chris_cornell_total_godhead_book.jpg' alt="cover" />
                 <Card.ImgOverlay className='album'>
                     <Card.Title>{props.title}</Card.Title>
                     <div>
