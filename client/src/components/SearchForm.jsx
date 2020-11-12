@@ -1,9 +1,9 @@
  import React from 'react';
  import Form from 'react-bootstrap/Form';
 
- const SearchForm = (handleSubmit) => {
+ const SearchForm = (handleSubmitProp) => {
     return (
-        <Form onChange={handleSubmit}>
+        <Form onChange={handleSubmitProp}>
             <Form.Row>
                 <Form.Control
                     id='searchbar'

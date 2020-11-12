@@ -1,5 +1,5 @@
 import React from 'react';
-import '../SAApp.css';
+import '../SoundAudio.css';
 
 const AboutChris = () => {
     return (
