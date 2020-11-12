@@ -2,7 +2,7 @@
  import Form from 'react-bootstrap/Form';
  import '../SoundAudio.css';
 
- const SearchForm = (search, onChange) => {
+ const SearchForm = ({search, onChange}) => {
     return (
         <Form onChange={onChange}>
             <Form.Row>
