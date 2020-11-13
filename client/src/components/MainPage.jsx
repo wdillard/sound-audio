@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
 
 const MainPage = () => {
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState(['i promise its not goodbye']);
   const [apiData, setApiData] = useState([]);
 
   const handleChange = (event) => {
@@ -16,9 +16,8 @@ const MainPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://www.songsterr.com/a/ra/songs/byartists.json?artists=audioslave,%20soundgarden,%22Chris%20Cornell%22`
+        `https://www.songsterr.com/a/ra/songs/byartists.json?artists=%22temple%20of%20the%20dog%22,audioslave,%20soundgarden,%22Chris%20Cornell%22`
       );
-
       setApiData(response.data);
     };
     fetchData();
@@ -30,7 +29,7 @@ const MainPage = () => {
 
     return (
       <>
-        <div className="search">
+        <div>
           <SearchForm serch={search} onChange={handleChange} />
         </div>
         <Row>

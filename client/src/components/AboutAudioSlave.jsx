@@ -27,6 +27,15 @@ const AboutAudioSlavePage = () => {
             <p>
                 This is more about AudioSlave
             </p>
+            <img
+                style={{
+                width: 300,
+                float: 'right',
+                margin: '0  1rem 1rem 1rem'
+            }}
+            src={'https://ih1.redbubble.net/image.1059010481.6783/st,small,845x845-pad,1000x1000,f8f8f8.jpg'}
+            alt={'Audio Slave'}
+            />
         </div>
         <div className="footerLinksAudioSlave">
             <a href={'https://www.google.com/search?sxsrf=ALeKk03AZjUKIkTVx7G-8S6UbawBHZZ6vA%3A1605113555049&ei=0xasX7TEAoWsswWSqYSQAQ&q=AudioSlave&oq=AudioSlave&gs_lcp=CgZwc3ktYWIQDDIHCC4QJxCTAjIECC4QJzIHCC4QFBCHAjIHCC4QFBCHAjIFCAAQsQMyAggAMgQILhBDMgIILjICCAAyAggAOgQIABBHOgoILhCxAhAnEJMCOgcIIxCxAhAnOgQILhAKOgcIABCxAxAKOgQIABAKUJ4eWMxoYNyMAWgCcAJ4AIAB2gGIAZgEkgEFNC4wLjGYAQCgAQGqAQdnd3Mtd2l6yAEIwAEB&sclient=psy-ab&ved=0ahUKEwj0-Zb6-frsAhUF1qwKHZIUARIQ4dUDCA0'}>

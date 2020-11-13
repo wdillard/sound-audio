@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 
 const NavMenu = () => {
   return (
-    <Nav className="nav" activeKey="/" style={{ backgroundOpacity: 0 }} as="ul">
+    <Nav className='nav' activeKey="/" style={{ backgroundOpacity: 0 }} as="ul">
       <Nav.Item as="li">
         <Nav.Link style={{ color: '#fff' }} href="/">
           MainPage
@@ -11,17 +11,17 @@ const NavMenu = () => {
       </Nav.Item>
       <Nav.Item as="li">
         <Nav.Link style={{ color: '#fff' }} href="/aboutChris">
-          About Chris
+          Chris Cornell
         </Nav.Link>
       </Nav.Item>
       <Nav.Item as="li">
         <Nav.Link style={{ color: '#fff' }} href="/aboutSoundGarden">
-          About SoundGarden
+          SoundGarden
         </Nav.Link>
       </Nav.Item>
       <Nav.Item as="li">
         <Nav.Link style={{ color: '#fff' }} href="/aboutAudioSlave">
-          About AudioSlave
+          AudioSlave
         </Nav.Link>
       </Nav.Item>
     </Nav>

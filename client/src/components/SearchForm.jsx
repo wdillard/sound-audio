@@ -4,16 +4,13 @@
 
  const SearchForm = ({search, onChange}) => {
     return (
-        <Form onChange={onChange}>
-            <Form.Row>
-                <Form.Control
-                    id='searchbar'
-                    size='lg'
-                    type='text'
-                    value={search}
-                    placeholder='NAME A SONG'
-                ></Form.Control>
-            </Form.Row>
+        <Form>
+            <Form.Control onChange={onChange}
+            id='searchbar'
+            size='lg'
+            type='text'
+            value={search}
+            placeholder='NAME A SONG' />
         </Form>
     );
  };

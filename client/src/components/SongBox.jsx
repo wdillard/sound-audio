@@ -11,7 +11,7 @@ const SongBox = (props) => {
                 <Card.ImgOverlay className='album' style={{backgroudColor: 'blue'}}>
                     <Card.Title style={{ textAlign:'center' }}>{props.title}</Card.Title>
                     <div className='PlayLink'>
-                        <Card.Link className='Play' href={`http://www.songsterr.com/a/wa/song?id=${props.id}`}>Learn To Play!</Card.Link>
+                        <Card.Link href={`http://www.songsterr.com/a/wa/song?id=${props.id}`}>Learn To Play!</Card.Link>
                     </div>
                 </Card.ImgOverlay>
         </Card>
